@@ -15,11 +15,11 @@ public class Picture extends File implements Printable{
     @Override
     public String getContent() {
 
-        String content = "";
+        StringBuilder content = new StringBuilder();
 
-        for (int i = 0 ; i < pixels.length ; i++){
-            for (int j = 0 ; j < pixels[i].length ; j++){
-                content = content + pixels[i][j] ;
+        for (boolean[] pixel : pixels) {
+            for (boolean b : pixel) {
+                content.append(b);
             }
         }
 
